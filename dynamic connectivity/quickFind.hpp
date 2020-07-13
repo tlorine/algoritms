@@ -1,19 +1,19 @@
 #include "header.h"
 #include "iostream"
 
-class quikFind {
+class quickFind {
 private:
     int *array_id;
     int size_array;
 public:
-    quikFind(int n);
-    ~quikFind();
+    quickFind(int n);
+    ~quickFind();
     int compound(int a, int b);
     int unionElem(int a, int b);
     void printArray();
 };
 
-quikFind::quikFind(int n) {
+quickFind::quickFind(int n) {
     array_id = new int[n];
     size_array = n;
 
@@ -22,11 +22,11 @@ quikFind::quikFind(int n) {
     }
 }
 
-quikFind::~quikFind() {
+quickFind::~quickFind() {
     delete array_id;
 }
 
-int quikFind::unionElem(int a, int b) {
+int quickFind::unionElem(int a, int b) {
     if (a >= size_array || a < 0)
         return (-1);
     if (b >= size_array || b < 0)
@@ -40,7 +40,7 @@ int quikFind::unionElem(int a, int b) {
     return (1);
 }
 
-int quikFind::compound(int a, int b) {
+int quickFind::compound(int a, int b) {
     if (a >= size_array || a < 0)
         return (-1);
     if (b >= size_array || b < 0)
@@ -51,7 +51,7 @@ int quikFind::compound(int a, int b) {
         return (0);
 }
 
-void quikFind::printArray() {
+void quickFind::printArray() {
     for(int i = 0; i < size_array; i++) {
         std::cout << "[" << array_id[i] << "] ";
     }

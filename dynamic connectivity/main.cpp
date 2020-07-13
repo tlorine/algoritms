@@ -1,12 +1,12 @@
 #include "header.h"
 
 int main() {
-    quikFind qf(10);
+    quickUnion qf(10);
 
-    qf.unionElem(2, 3);
-    qf.unionElem(7, 8);
-    qf.unionElem(7, 0);
-    qf.unionElem(7, 2);
-    qf.unionElem(1, 0);
+    qf.unionElem(4, 3);
+    qf.unionElem(1, 3);
+    qf.unionElem(4, 3);
+    qf.unionElem(7, 1);
+    qf.unionElem(8, 4);
     qf.printArray();
 }
